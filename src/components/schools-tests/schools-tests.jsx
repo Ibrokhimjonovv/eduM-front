@@ -14,8 +14,8 @@ const SchoolsTests = () => {
       setLoading(true);
       try {
         const [categoriesResponse, testsResponse] = await Promise.all([
-          fetch(`api/category-test-count/`),
-          fetch(`api/tests_title/`),
+          fetch(`category-test-count/`),
+          fetch(`tests_title/`),
         ]);
 
         if (!categoriesResponse.ok || !testsResponse.ok) {
